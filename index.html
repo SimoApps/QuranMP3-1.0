@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap">
+   
+   <link rel="stylesheet"href="Style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+   
+    <title>المكتبة الصوتية للقرآن الكريم</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>المكتبة الصوتية للقرآن الكريم </h3>
+
+    <img id="reciterImage" src="https://telegra.ph/file/9f115651eac8b4b1159ff.jpg" alt="صورة المقرء">
+    <br>
+    <strong id="reciterName">QuranMP3 1.0</strong>
+
+    <label for="reciters"><strong></strong></label>
+    <select id="reciters" name="reciters" onchange="changeReciter()">
+        <!-- إضافة المقرئين بواسطة حلقة for loop -->
+        <script>
+            var recitersList = 
+       ["إختر المقرء","أحمد علي العجمي", "سعود الشريم", "أبو بكر شاطر", "سعد الغامدي", "ماهر المعيقلي", "عبد الباسط عبد الصمد", "ياسر الدوسري", "إبراهيم الأخضر", "خليفة الطنيجي", "حسن صالح", "عبد الرحمن العوسي", "العيون الكوشي", "عمر القزابري", "فارس عباد", "محمد جبريل", "مشاري العفاسي", "المنشاوي", "ياسين الجزائري", "وديع اليمني", "صلاح بوخاطر"];
+            var recitersSelect = document.getElementById("reciters");
+
+            for (var i = 0; i < recitersList.length; i++) {
+                var option = document.createElement("option");
+                option.value = "reciter" + (i + 1);
+                option.text = recitersList[i];
+                recitersSelect.appendChild(option);
+            }
+        </script>
+    </select>
+
+    <label for="surahs"><strong></strong></label> 
+    
+<select id="surahs" name="surahs" onchange="changeSurah()">
+  
+
+        <!-- إضافة السور بواسطة حلقة for loop -->
+        <script>
+            var surahsList = ["إختر السورة", "الفاتحة", "البقرة", "آل عمران", "النساء", "المائدة", "الأنعام", "الأعراف", "الأنفال", "التوبة", "يونس", "هود", "يوسف", "الرعد", "إبراهيم", "الحجر", "النحل", "الإسراء", "الكهف", "مريم", "طه", "الأنبياء", "الحشر", "الممتحنة", "النور", "الفرقان", "الشعراء", 
+            "النمل", "القصص", "العنكبوت", "الروم","لقمان","السجدة","الأحزاب","سبأ","فاطر","يس","الصافات","ص","الزمر","غافر","فصلت","الشورى","الزخرف","الدخان","الجاثية","الأحقاف","محمد","الفتح","الحجرات","ق","الذاريات","الطور","النجم","القمر","الرحمن","الواقعة","الحديد","المجادلة","الحشر","الممتحنة","الصف","الجمعة","المنافقون","التغابن","الطلاق","التحريم","الملك","القلم","الحاقة","المعارج","نوح","الجن","المزمل","المدثر","القيامة","الإنسان","المرسلات","النبأ","النازعات","عبس","التكوير","الإنفطار","المطففين","الانشقاق","البروج","الطارق","الأعلى","الغاشية","الفجر","البلد","الشمس","الليل","الضحى","الشرح","التين","العلق","القدر","البينة","الزلزلة","العاديات","القارعة","التكاثر","العصر","الهمزة","الفيل","قريش","الماعون","الكوثر","الكافرون","النصر","المسد","الإخلاص","الفلق","الناس"];
+            var surahsSelect = document.getElementById("surahs");
+
+            for (var i = 0; i < surahsList.length; i++) {
+                var option = document.createElement("option");
+                option.value = "surahs" + (i + 1);
+                option.text = surahsList[i];
+                surahsSelect.appendChild(option);
+            }
+        </script>
+    </select>
+
+    <audio controls>
+        <source src="path/to/your/audiofile.mp3" type="audio/mp3">
+        تصفح متصفحك لدعم تشغيل الصوت.
+    </audio>
+
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+ <script src="./main.js">
+</script>
+</body>
+</html>
